@@ -1,4 +1,4 @@
-package kata_grpc
+package pizza
 
 import (
 	"log"
@@ -23,5 +23,5 @@ func initGRPCServer() *grpc.Server {
 func TestGetPizzaFromName(t testing.T) {
 	grpcServer := initGRPCServer()
 
-	response := grpcServer
+	//response := grpcServer.RegisterService
 }

@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package pizza;
+
+option go_package = "kata_grpc/pizza";
+
+service PizzaService {
+    rpc PizzaName(PizzaNameRequest) returns (PizzaNameResponse) {}
+    rpc PizzaId(PizzaIdRequest) returns (PizzaIdResponse) {}
+}
+
+message PizzaNameRequest {
+    string name = 1;
+}
+
+message PizzaNameResponse {
+    Pizza pizza = 1;
+}
+
+message PizzaIdRequest {
+    int64 id = 1;
+}
+
+message PizzaIdResponse {
+    Pizza pizza = 1;
+}
+
+message Pizza {
+    string name = 1;
+    int64 id = 2;
+}
+
